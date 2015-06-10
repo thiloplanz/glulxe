@@ -732,7 +732,15 @@ static int findopcode(int opnum)
   case op_jge: return jge_gc;
   case op_jgt: return jgt_gc;
   case op_jle: return jle_gc;
+  case op_jltu: return jltu_gc;
+  case op_jgeu: return jgeu_gc;
+  case op_jgtu: return jgtu_gc;
+  case op_jleu: return jleu_gc;
   case op_call: return call_gc;
+  case op_callf: return callf_gc;
+  case op_callfi: return callfi_gc;
+  case op_callfii: return callfii_gc;
+  case op_callfiii: return callfiii_gc;
   case op_return: return return_gc;
   case op_catch: return catch_gc;
   case op_throw: return throw_gc;
@@ -770,6 +778,44 @@ static int findopcode(int opnum)
   case op_restoreundo: return restoreundo_gc;
   case op_protect: return protect_gc;
   case op_glk: return glk_gc;
+  case op_setiosys: return setiosys_gc;
+  case op_accelfunc: return accelfunc_gc;
+  case op_accelparam: return accelparam_gc;
+  case op_binarysearch: return binarysearch_gc;
+  case op_malloc: return malloc_gc;
+  case op_mfree: return mfree_gc;
+  case op_numtof: return numtof_gc;
+  case op_ftonumz: return ftonumz_gc;
+  case op_ftonumn: return ftonumn_gc;
+  case op_ceil: return ceil_gc;
+  case op_floor: return floor_gc;
+  case op_fadd: return fadd_gc;
+  case op_fsub: return fsub_gc;
+  case op_fmul: return fmul_gc;
+  case op_fdiv: return fdiv_gc;
+  case op_fmod: return fmod_gc;
+  case op_sqrt: return sqrt_gc;
+  case op_exp: return exp_gc;
+  case op_log: return log_gc;
+  case op_pow: return pow_gc;
+  case op_sin: return sin_gc;
+  case op_cos: return cos_gc;
+  case op_tan: return tan_gc;
+  case op_asin: return asin_gc;
+  case op_acos: return acos_gc;
+  case op_atan: return atan_gc;
+  case op_atan2: return atan2_gc;
+  case op_jfeq: return jfeq_gc;
+  case op_jfne: return jfne_gc;
+  case op_jflt: return jflt_gc;
+  case op_jfge: return jfge_gc;
+  case op_jfgt: return jfgt_gc;
+  case op_jfle: return jfle_gc;
+  case op_jisnan: return jisnan_gc;
+  case op_jisinf: return jisinf_gc;
+    
+
+ 
   default: 
     printf("Unknown opcode %02x\n", opnum);
     return nop_gc;
