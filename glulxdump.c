@@ -767,6 +767,10 @@ static int findopcode(int opnum)
   case op_streamnum: return streamnum_gc;
   case op_streamstr: return streamstr_gc;
   case op_gestalt: return gestalt_gc;
+  case op_debugtrap: return debugtrap_gc;
+  case op_getmemsize: return getmemsize_gc;
+  case op_setmemsize: return setmemsize_gc;
+  case op_jumpabs: return jumpabs_gc;
   case op_random: return random_gc;
   case op_setrandom: return setrandom_gc;
   case op_quit: return quit_gc;
