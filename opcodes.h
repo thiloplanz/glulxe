@@ -139,5 +139,7 @@
 #define op_jisnan       (0x1C8)
 #define op_jisinf       (0x1C9)
 
+#define op_fyrecall     (0x1000)
+
 #endif /* _OPCODES_H */
 

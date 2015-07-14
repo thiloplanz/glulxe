@@ -193,6 +193,7 @@ typedef int32_t glsi32;
 #define jfge_gc 113
 #define jisnan_gc 114
 #define jisinf_gc 115
+#define fyrecall_gc 116
 
 typedef struct opcode_struct
 {  
@@ -338,6 +339,7 @@ static opcode_t opcodes_table[] =
   { (uchar *) "jfge",       0x1C5,  Br, GOP_Float, 3 },
   { (uchar *) "jisnan",     0x1C8,  Br, GOP_Float, 2 },
   { (uchar *) "jisinf",     0x1C9,  Br, GOP_Float, 2 },
+  { (uchar *) "fyrecall",   0x1000, St, 0, 4}
 };
 
 static int read_header(FILE *fl);
@@ -817,6 +819,7 @@ static int findopcode(int opnum)
   case op_jfle: return jfle_gc;
   case op_jisnan: return jisnan_gc;
   case op_jisinf: return jisinf_gc;
+  case op_fyrecall: return fyrecall_gc;
     
 
  
